@@ -6,6 +6,17 @@ def sock_color_frequency(socks_array)
   socks_array.tally
 end
 
+def sock_color_pairs(socks_array)
+  sock_color_frequency_hash = sock_color_frequency(socks_array)
+  pair_colors = {} #initializing hash
+  sock_color_frequency_hash.each do |color, frequency| 
+    pair_colors[color] = frequency / 2 # We create keys as pair_colors[color] as we save the related value 
+    # * As we only use integers will give us integer result(will ignore decimals(Float numbers))
+  end
+  pair_colors
+end
+
+
 describe 'Scock Merchant' do
   it 'has to be an array of integers representing the color(1,2,3..n) of each sock' do
     expect(socks_array).to all(be_an(Integer))
