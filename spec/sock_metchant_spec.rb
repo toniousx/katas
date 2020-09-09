@@ -18,9 +18,7 @@ end
 
 def sock_pairs_that_can_sell(socks_array)
   pairs_accumulator = 0
-  sock_color_pairs(socks_array).each do |color, number_of_pairs|
-    pairs_accumulator = pairs_accumulator + number_of_pairs
-  end
+  sock_color_pairs(socks_array).each {|color, number_of_pairs| pairs_accumulator += number_of_pairs }
   pairs_accumulator
 end
 
