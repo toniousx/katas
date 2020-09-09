@@ -16,6 +16,13 @@ def sock_color_pairs(socks_array)
   pair_colors
 end
 
+def sock_pairs_that_can_sell(socks_array)
+  pairs_accumulator = 0
+  sock_color_pairs(socks_array).each do |color, number_of_pairs|
+    pairs_accumulator = pairs_accumulator + number_of_pairs
+  end
+  pairs_accumulator
+end
 
 describe 'Scock Merchant' do
   it 'has to be an array of integers representing the color(1,2,3..n) of each sock' do
