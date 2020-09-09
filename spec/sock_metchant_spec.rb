@@ -22,7 +22,8 @@ def sock_pairs_that_can_sell(socks_array)
   pairs_accumulator
 end
 
-describe 'Scock Merchant' do
+# rspec tests
+describe 'Sock Merchant' do
   it 'has to be an array of integers representing the color(1,2,3..n) of each sock' do
     expect(socks_array).to all(be_an(Integer))
   end
