@@ -14,5 +14,9 @@ describe 'Scock Merchant' do
   it 'counts colors/integers into a hash as key(color/integer), value(frequency)' do
 		expect(sock_color_frequency(socks_array)).to eq({1=>6, 2=>4, 3=>3})
   end
+
+  it 'counts pairs for each color' do
+    expect(sock_color_pairs(socks_array)).to eq({1 => 3, 2 => 2, 3 => 1})
+  end
 end
 
