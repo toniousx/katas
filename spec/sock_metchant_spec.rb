@@ -29,5 +29,9 @@ describe 'Scock Merchant' do
   it 'counts pairs for each color' do
     expect(sock_color_pairs(socks_array)).to eq({1 => 3, 2 => 2, 3 => 1})
   end
+
+  it 'shows the number of pairs that can be saled' do
+    expect(sock_pairs_that_can_sell(socks_array)).to eq(6)
+  end
 end
 
